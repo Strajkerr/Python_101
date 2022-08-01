@@ -1,0 +1,60 @@
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+pick = int(input("Rock (1), paper (2), scissors (3): "))
+if pick == 1:
+    print(rock)
+elif pick == 2:
+    print(paper)
+else:
+    print(scissors)
+computer_pick = random.randint(1, 3)
+print("Computer pick: \n")
+if computer_pick == 1:
+    print(rock)
+    if pick == 1:
+        print("Draw")
+    elif pick == 2:
+        print("You win!")
+    else:
+        print("Computer wins!")
+elif computer_pick == 2:
+    print(paper)
+    if pick == 2:
+        print("Draw")
+    elif pick == 3:
+        print("You win!")
+    else:
+        print("Computer wins!")
+elif computer_pick == 3:
+    print(scissors)
+    if pick == 3:
+        print("Draw")
+    elif pick == 1:
+        print("You win!")
+    else:
+        print("Computer wins!")
